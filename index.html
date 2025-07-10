@@ -9,19 +9,47 @@
   </head>
   <body>
     <header class="relative">
+      <!--logo-->
       <img
         class="min-h-120 w-full object-cover"
         src="/img/desktop/image-header.webp"
         alt=" image-header"
       />
+
       <nav
         class="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-6"
       >
         <a class="" href="##"><img src="/img/logo.svg" alt="logo.svg" /></a>
-        <button class="hover:cursor-pointer" id="menu-button">
+        <!-- menu desktop -->
+        <ul class="hidden sm:flex space-x-4 text-white">
+          <il
+            ><a class="hover:bg-yellow-300 p-4 rounded-full" href="#"
+              >About</a
+            ></il
+          >
+          <il
+            ><a class="hover:bg-yellow-300 p-4 rounded-full" href="#"
+              >Services</a
+            ></il
+          >
+          <il
+            ><a class="hover:bg-yellow-300 p-4 rounded-full" href="#"
+              >Proyects</a
+            ></il
+          >
+          <il
+            ><a class="uppercase hover:bg-yellow-300 p-4 rounded-full" href="#"
+              >Contact</a
+            ></il
+          >
+        </ul>
+        <!-- menu movile -->
+        <button class="hover:cursor-pointer sm:hidden" id="menu-button">
           <img src="/img/icon-hamburger.svg" alt="icon-hamburger" />
         </button>
       </nav>
+
+      <!-- texto header -->
       <div
         class="absolute text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center"
       >
@@ -36,7 +64,7 @@
       </div>
 
       <!-- Menu -->
-      <section class="justify-center items-center hidden" id="menu">
+      <section class="justify-center items-center hidden sm:hidden" id="menu">
         <div class="z-100 absolute top-14 right-9 flex flex-col items-center">
           <div
             class="border-l-40 border-b-40 border-l-transparent border-r-transparent border-b-white"
@@ -80,77 +108,90 @@
     </header>
     <main>
       <!-- Section 1 -->
-      <section>
+      <section
+        class="flex flex-col justify-center items-center sm:flex-row-reverse"
+      >
         <img
-          class="w-full object-cover h-80"
+          class="w-full object-cover h-80 sm:w-1/2"
           src="/img/desktop/image-transform.webp"
           alt="image-transform"
         />
-        <div class="text-center px-6 py-12">
-          <h2 class="text-4xl font-bold">Transform your bread</h2>
-          <p class="text-base my-8 mx-12 text-gray-500 font-bold">
+        <div class="text-center px-6 py-12 sm:py-0 sm:w-1/2 sm:text-left">
+          <h2 class="text-4xl font-bold sm:text-2xl">Transform your bread</h2>
+          <p
+            class="text-base my-8 mx-12 text-gray-500 font-bold sm:mx-0 sm:mr-4"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
             odio consectetur sunt quisquam illum minima voluptates itaque dolore
             molestias voluptas voluptatibus fugiat.
           </p>
-          <h4 class="text-2xl font-bold uppercase decoration-1">Learn more</h4>
+          <h4 class="text-2xl font-bold uppercase decoration-1 sm:text-base">
+            Learn more
+          </h4>
         </div>
       </section>
       <!-- Section 2 -->
-      <section>
+      <section class="flex flex-col justify-center items-center sm:flex-row">
         <img
-          class="w-full object-cover h-80"
+          class="w-full object-cover h-80 sm:w-1/2"
           src="/img/desktop/image-stand-out.webp"
           alt="image-stand-out"
         />
-        <div class="text-center px-6 py-12">
-          <h2 class="text-4xl font-bold">Stand out to the right audieencee</h2>
-          <p class="text-base my-8 mx-12 text-gray-500 font-bold">
+        <div class="text-center p-6 sm:w-1/2 sm:text-left">
+          <h2 class="text-4xl font-bold sm:text-2xl">
+            Stand out to the right audieencee
+          </h2>
+          <p
+            class="text-base my-8 mx-12 text-gray-500 font-bold sm:mx-0 sm:mr-4"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
             odio consectetur sunt quisquam illum minima voluptates itaque dolore
             molestias voluptas voluptatibus fugiat.
           </p>
-          <h4 class="text-2xl font-bold uppercase decoration-1">Learn more</h4>
+          <h4 class="text-2xl font-bold uppercase decoration-1 sm:text-base">
+            Learn more
+          </h4>
         </div>
       </section>
-      <!-- Section 3 -->
-      <section>
-        <div>
+
+      <section class="flex flex-col sm:flex-row">
+        <!-- Section 3 -->
+        <section class="relative w-full max-w-6xl h-96 mx-auto overflow-hidden">
           <img
-            class="h-120 absolute w-full object-cover"
+            class="w-full h-full object-cover"
             src="/img/desktop/image-graphic-design.webp"
             alt="image-graphic-design"
           />
-          <div class="relative z-10 pt-60">
-            <h2 class="text-4xl font-bold text-center py-8">Graphic Design</h2>
-            <p class="text-base my-2 mx-12 text-gray-500 font-bold text-center">
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center mt-40"
+          >
+            <h2 class="text-4xl font-bold mb-4">Graphic Design</h2>
+            <p class="text-base font-medium">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-              odio consectetur sunt quisquam illum minima voluptates itaque
-              dolore molestias voluptas voluptatibus fugiat.
+              odio...
             </p>
           </div>
-        </div>
-      </section>
-      <!-- Section 4 -->
-      <section>
-        <div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="relative w-full max-w-6xl h-96 mx-auto overflow-hidden">
           <img
-            class="h-120 absolute w-full object-cover"
-            src="img/desktop/image-photography.webp"
+            class="w-full h-full object-cover"
+            src="/img/desktop/image-photography.webp"
             alt="image-photography"
           />
-          <div class="relative z-10 pt-60">
-            <h2 class="text-4xl font-bold text-center py-8">Photography</h2>
-            <p
-              class="text-base my-2 mb-14 mx-12 text-gray-500 font-bold text-center"
-            >
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center mt-40"
+          >
+            <h2 class="text-4xl font-bold mb-4">Photography</h2>
+            <p class="text-base font-medium mb-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-              odio consectetur sunt quisquam illum minima voluptates itaque
-              dolore molestias voluptas voluptatibus fugiat.
+              odio...
             </p>
           </div>
-        </div>
+        </section>
       </section>
+
       <!-- Section testimonials -->
       <section class="text-center p-6">
         <h2 class="text-2xl text-gray-400 uppercase">Client testimonials</h2>
@@ -204,21 +245,21 @@
         </div>
       </section>
       <!-- Section img -->
-      <section class="flex flex-wrap">
+      <section class="flex flex-wrap ">
         <img
-          class="object-cover w-1/2"
+          class="object-cover w-1/2 sm:w-1/4"
           src="/img/desktop/image-gallery-milkbottles.webp"
           alt="image-gallery-milkbottles"
         /><img
-          class="object-cover w-1/2"
+          class="object-cover w-1/2 sm:w-1/4"
           src="/img/desktop/image-gallery-orange.webp"
           alt="image-gallery-orange"
         /><img
-          class="object-cover w-1/2"
+          class="object-cover w-1/2 sm:w-1/4"
           src="/img/desktop/image-gallery-cone.webp"
           alt="image-gallery-cone"
         /><img
-          class="object-cover w-1/2"
+          class="object-cover w-1/2 sm:w-1/4"
           src="/img/desktop/image-gallery-sugarcubes.webp"
           alt="image-gallery-sugarcubes"
         />
@@ -226,7 +267,7 @@
       <!-- section footer-->
       <footer class="bg-green-300">
         <div class="flex flex-col justify-between items-center px-6 py-4">
-          <img class="my-12 w-1/2" src="/img/logo.svg" alt="logo.svg" />
+          <img class="my-12 w-1/2 sm:w-1/4" src="/img/logo.svg" alt="logo.svg" />
           <nav class="flex space-x-12">
             <a href="#" class="text-gray-500 hover:text-green-900 font-bold"
               >About</a
